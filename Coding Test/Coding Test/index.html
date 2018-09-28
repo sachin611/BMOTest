@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="webtest.css">	
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	</head>
+	<body>
+		<div class="topnav" id="myTopnav">
+			<a href="#home" class="logo" id="#logo"><img src="Capture1.PNG" alt="BMO financial group"></a>		
+  			<a href="#home" title="Click here for more options">Home</a>
+  			<a href="#news" title="Click here for more options">News</a>
+			<div class="dropdown">
+    			<button class="dropbtn">List 
+					<i class="fa fa-caret-down"></i>
+    			</button>
+    			<div class="dropdown-content">
+      				<a href="#" title="Click here to know About us">About Us </a>
+      				<a href="#" title="Click here to contact us">Contact </a>
+	  				<a href="#" title="Click here for portfolio">Portfolio </a>
+      				<a href="#" title="Click here to check status">Status </a>
+      				<a href="#" title="Click here to check reviews">Review </a>
+    			</div>
+  			</div> 
+  			<a href="#contact" title="Click here for advertisements">Adverts</a>
+  			<a href="#location" title="Click here to find out locations">Locations</a>
+			<div class="dropmenu">
+				<button onclick="myMenuFunction()" class="menubutton" title="Click here for profile">Profile</button>
+  				<div id="mydropmenu" class="dropmenu-content">
+    				<a href="#signin" title="Click here for sign in">Sign-ins</a>
+    				<a href="#edit" title="Click here for Edit Profile">Edit Profile</a>
+    				<a href="#signout" title="Click here for Sign Out">Sign-out</a>
+  				</div>
+			</div>
+			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    			<i class="fa fa-bars"></i>
+  			</a>	
+		</div>
+		<div style="padding-left:16px">
+  			<h2>BMO UI Developer Test</h2>
+  			<p>This document is created for the test purpose.Thank you for visiting this page.</p>
+		</div>
+		<script>
+			function myFunction() {
+				var x = document.getElementById("myTopnav");
+    			if (x.className === "topnav") {
+					x.className += " responsive";
+				}
+	 			else {
+					x.className = "topnav";
+    			}
+			}
+			function myMenuFunction() {
+    			document.getElementById("mydropmenu").classList.toggle("show");
+			}
+			// Close the dropmenu if the user clicks outside of it
+			window.onclick = function(event) {
+				if (!event.target.matches('.menubutton')) {
+					var dropmenus = document.getElementsByClassName("dropmenu-content");
+    				var i;    
+					for (i = 0; i < dropmenus.length; i++) {
+      				var opendropmenu = dropmenus[i];
+						if (opendropmenu.classList.contains('show')) {
+        				opendropmenu.classList.remove('show');
+					}
+    			}
+  			}
+		}
+		</script>
+	</body>
+</html>

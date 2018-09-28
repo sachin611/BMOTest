@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="webtest.css">	
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<div class="topnav" id="myTopnav">
+	<a href="#home" class="logo" id="#logo"><img src="Capture1.PNG"></a>		
+  	<a href="#home">Link1</a>
+  	<a href="#news">Link2</a>
+	<div class="dropdown">
+    	<button class="dropbtn">Link3 
+			<i class="fa fa-caret-down"></i>
+    	</button>
+    	<div class="dropdown-content">
+      		<a href="#">L2Link1 </a>
+      		<a href="#">L2Link2 </a>
+	  		<a href="#">L2Link3 </a>
+      		<a href="#">L2Link4 </a>
+      		<a href="#">L2Link5 </a>
+    	</div>
+  	</div> 
+  	<a href="#contact">Link4</a>
+  	<a href="#about">Link5</a>
+	<div class="dropmenu">
+<button onclick="myMenuFunction()" class="menubutton">dropmenu</button>
+  <div id="mydropmenu" class="dropmenu-content">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </div>
+</div>
+
+	
+	<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    	<i class="fa fa-bars"></i>
+  	</a>
+	
+</div>
+
+<div style="padding-left:16px">
+  <h2>Responsive Topnav Example</h2>
+  <p>Resize the browser window to see how it works.</p>
+</div>
+<script>
+/*function myFunction() 
+	{var x = document.getElementById("myTopnav");
+    	if (x.className === "topnav") 
+		{x.className += " responsive";}
+	 else {
+        x.className = "topnav";
+    }
+}*/
+
+function myMenuFunction() {
+    document.getElementById("mydropmenu").classList.toggle("show");
+}
+
+// Close the dropmenu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.menubutton')) {
+
+    var dropmenus = document.getElementsByClassName("dropmenu-content");
+    var i;
+    for (i = 0; i < dropmenus.length; i++) {
+      var opendropmenu = dropmenus[i];
+      if (opendropmenu.classList.contains('show')) {
+        opendropmenu.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+	</body>
+</html>
